@@ -1,0 +1,66 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_blocksi/list
+
+    TODO describe template list
+
+    Example context (json):
+    {
+    }
+}}
+
+<h2 class="mb-3">{{#str}}listgroups, local_blocksi{{/str}}</h2>
+
+{{#hasgroups}}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{#str}}group{{/str}}</th>
+                <th>{{#str}}students{{/str}}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#groups}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{studentcount}}</td>
+                    <td>
+                        {{#studentcount}}
+                            <a data-action="download" href="{{{url}}}" role="button">
+                                <i class="icon fa fa-circle-down" title="{{#str}}download, local_blocksi{{/str}}" role="img" aria-label="Manual enrolments"></i>
+                            </a>
+                        {{/studentcount}}
+                        {{^studentcount}}
+                            <a data-action="download" href="#" role="button" class="disabled">
+                                <i class="icon fa fa-circle-down" title="{{#str}}download, local_blocksi{{/str}}" role="img" aria-label="Manual enrolments"></i>
+                            </a>
+                        {{/studentcount}}
+                    </td>
+                </tr>
+            {{/groups}}
+            
+        </tbody>
+    </table>
+{{/hasgroups}}
+
+{{^hasgroups}}
+    <div class="alert alert-danger" role="alert">
+        {{#str}}errorcreategroups, local_blocksi{{/str}}
+    </div>
+{{/hasgroups}}
