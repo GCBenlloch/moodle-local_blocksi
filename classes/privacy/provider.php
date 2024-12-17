@@ -15,24 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * English language pack for Blocksi
- *
  * @package    local_blocksi
- * @category   string
  * @copyright  2024 Gonzalo Cañada
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace local_blocksi\privacy;
+
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Blocksi';
-
-$string['blocksi:view'] = 'Ver la página de exportación de Blocksi';
-
-$string['menuitem'] = 'Exportar a Blocksi';
-$string['listgroups'] = 'Grupos disponibles para exportar';
-$string['download'] = 'Descargar';
-
-$string['errorcreategroups'] = 'Por favor, cree uno o más grupos con estudiantes antes de utilizar esta herramienta';
-
-$string['privacy:null_reason'] = 'Blocksi export no almacena ninguna información del usuario, sólo recoge los datos del usuario del núcleo de moodle.';
+class provider implements \core_privacy\local\metadata\null_provider {
+    public static function get_reason(): string {
+        return 'privacy:null_reason';
+    }
+}

@@ -34,3 +34,5 @@ $string['listgroups'] = 'Avaliable groups to export';
 $string['download'] = 'Download';
 
 $string['errorcreategroups'] = 'Please create one or more groups with students before using this tool';
+
+$string['privacy:null_reason'] = 'Blocksi export does not store any user information, it only gathers user data from the moodle core.';
