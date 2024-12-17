@@ -1,7 +1,7 @@
 moodle-local_blocksi
 ====================
 
-Allows to download the students emails of a group in CSV format to import in a Blocksi classroom
+Allows to download group members email in CSV format to import in a [Blocksi](https://blocksi.net/) classroom.
 
 Installation
 ============
@@ -12,7 +12,10 @@ Installation
 Use
 ===
 
-* To use in a course, got to Settings cog > More... > Export to Blocksi
+* To use in a course, got to Settings cog > More... > Export to Blocksi.
+* You will be presented with a list of all available groups in the course. Download the CSV file of the group you want.
+* Go to [teacher.blocksi.net](https://teacher.blocksi.net/) and open the classroom you want to import the users in.
+* Open the student list and import the CSV file you just downloaded.
 
 History
 ======
