@@ -17,10 +17,19 @@
 {{!
     @template local_blocksi/list
 
-    TODO describe template list
+    Show a list of groups with current member count and download button
 
     Example context (json):
     {
+        "groups": [
+            {
+                "id": 5,
+                "name": "Test",
+                "studentcount": 20,
+                "url": "/local/blocksi/export.php?id=1&group=5"
+            }
+        ],
+        "hasgroups": true
     }
 }}
 

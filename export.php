@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * TODO describe file export
+ * Export all group members email address in a csv file
  *
  * @package    local_blocksi
  * @copyright  2024 Gonzalo Cañada
